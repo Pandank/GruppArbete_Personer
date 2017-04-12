@@ -42,6 +42,11 @@ namespace GruppArbete_Personer.Controllers
         [HttpPost]
         public IActionResult Edit(Person person)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(person);
+            }
+
             DataManager.EditPerson(person);
 
             return RedirectToAction(nameof(Index));

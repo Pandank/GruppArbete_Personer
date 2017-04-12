@@ -39,8 +39,7 @@ namespace GruppArbete_Personer.Models
 
         public static void EditPerson(Person person)
         {
-            var personToChange = personList
-                .FirstOrDefault(p => p.Id == person.Id);
+            var personToChange = GetPerson(person.Id);
 
             personToChange.Name = person.Name;
             personToChange.Email = person.Email;

@@ -9,15 +9,12 @@ namespace GruppArbete_Personer.Models
     public class Person
     {
         public static int PersonCount { get; set; }
-
         public Person()
         {
             this.Id = PersonCount;
             PersonCount++;
         }
-
         public int Id { get; set; }
-
         [Required]
         public string Name { get; set; }
 
