@@ -1,0 +1,24 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model GruppArbete_Personer.Models.Person
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Name</title>
+</head>
+<body>
+    <form asp-action="Edit">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+        <br />
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+        <br />
+        <input type="submit" />
+
+    </form>
+
+</body>
+</html>

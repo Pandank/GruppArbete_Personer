@@ -1,0 +1,21 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model GruppArbete_Personer.Models.Person[]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People index</title>
+</head>
+<body>
+
+    @foreach (var p in Model)
+    {
+        <div>
+            <p>@p.ToString();
+                <a asp-controller="People" asp-action="Edit" asp-route-id="@p.Id">Edit</a>
+            </p>
+        </div>
+    }
+    
+    <a asp-controller="People" asp-action="Create">Create</a>
+</body>
+</html>
