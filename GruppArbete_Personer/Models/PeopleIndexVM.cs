@@ -19,12 +19,7 @@ namespace GruppArbete_Personer.Models
 
         public int Id { get; set; } 
 
-        public bool ShowAsHighlighted
-        {
-            get => Regex.IsMatch(this.Email, "([\\w%+-])+@acme\\.com");
-
-            set => _showAsHighlighted = value;
-        }
+        public bool ShowAsHighlighted => Regex.IsMatch(this.Email, "([\\w%+-])+@acme\\.com");
 
         public override string ToString()
         {

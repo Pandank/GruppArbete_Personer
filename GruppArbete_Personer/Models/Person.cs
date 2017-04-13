@@ -15,7 +15,7 @@ namespace GruppArbete_Personer.Models
             PersonCount++;
         }
         public int Id { get;}
-        [Required]
+        
         public string Name { get; set; }
 
         
