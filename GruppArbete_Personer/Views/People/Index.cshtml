@@ -7,28 +7,34 @@
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Our Peeps</h1>
-    <table id="peeps">
-        @foreach (var p in Model)
-        {
-            <tr> @{if (p.ShowAsHighlighted)
-                 {
-                     <td style="color: fuchsia">@p.ToString();</td>
-                     <td><a asp-controller="People" asp-action="Edit" asp-route-id="@p.Id">Edit</a>
-                     </td>
-                 }
-                 else
-                 {
-                     <td>@p.ToString();</td>
-                     <td><a asp-controller="People" asp-action="Edit" asp-route-id="@p.Id">Edit</a>
-                     </td>
-                }}
-                
-            </tr>
+    <div>
+        <h1>Our Peeps</h1>
+    </div>
+    <div>
+        <table id="peeps">
+            @foreach (var p in Model)
+            {
+                <tr>
+                    @{if (p.ShowAsHighlighted)
+                        {
+                            <td style="color: fuchsia">@p.ToString();</td>
+                            <td>
+                                <a asp-controller="People" asp-action="Edit" asp-route-id="@p.Id">Edit</a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>@p.ToString();</td>
+                            <td>
+                                <a asp-controller="People" asp-action="Edit" asp-route-id="@p.Id">Edit</a>
+                            </td>
+                        }
+                    }
+                </tr>
+            }
+        </table>
+        <a asp-controller="People" asp-action="Create"><input type="button" id="createButton" value="Create" /></a>
+    </div>
 
-        }
-    </table>
-
-    <a asp-controller="People" asp-action="Create"><input type="button" id="createButton" value="Create" /></a>
 </body>
 </html>
