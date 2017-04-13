@@ -14,14 +14,11 @@ namespace GruppArbete_Personer.Models
             this.Id = PersonCount;
             PersonCount++;
         }
-        public int Id { get; set; }
+        public int Id { get;}
         [Required]
         public string Name { get; set; }
 
-        [EmailAddress(ErrorMessage = "Dude write an email...")]
-        [Display(Name = "E-mail")]
-        [RegularExpression("([A-Za-z0-9_%+-])+@acme\\.com",ErrorMessage = "only acme.com")]
-        [Required]
+        
         public string Email { get; set; }
 
         public override string ToString()

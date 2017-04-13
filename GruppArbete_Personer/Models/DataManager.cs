@@ -5,7 +5,7 @@ namespace GruppArbete_Personer.Models
 {
     public static class DataManager
     {
-        
+
 
         public static List<Person> personList = new List<Person>
         {
@@ -17,16 +17,31 @@ namespace GruppArbete_Personer.Models
         };
 
 
-        
 
-        public static void AddPerson(Person person)
+
+        public static void AddPerson(PeopleCreateVM viewModel)
         {
+            var person = new Person
+            {
+                Email = viewModel.Email,
+                Name = viewModel.Name
+            };
+
+
             personList.Add(person);
         }
 
-        public static Person[] GetAllPersons()
-        {   
-            return personList.ToArray();
+        public static PeopleIndexVM[] GetAllPersons()
+        {
+            var peoplelist = personList
+                .Select(p => new PeopleIndexVM
+                {
+                    Name = p.Name,
+                    Email = p.Email,
+                    Id = p.Id
+                }).ToArray();
+
+            return peoplelist;
         }
 
         public static Person GetPerson(int id)
@@ -37,13 +52,15 @@ namespace GruppArbete_Personer.Models
             return q;
         }
 
-        public static void EditPerson(Person person)
+        public static void EditPerson(PeopleEditVM viewModel)
         {
-            var personToChange = GetPerson(person.Id);
+            var personToChange = GetPerson(viewModel.Id);
 
-            personToChange.Name = person.Name;
-            personToChange.Email = person.Email;
+            personToChange.Name = viewModel.Name;
+            personToChange.Email = viewModel.Email;
 
         }
+
+
     }
 }

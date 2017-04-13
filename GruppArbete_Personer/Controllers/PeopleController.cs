@@ -17,37 +17,51 @@ namespace GruppArbete_Personer.Controllers
             var persons = DataManager.GetAllPersons();
             return View(persons);
         }
+
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
-        public IActionResult Create(Person person)
+        public IActionResult Create(PeopleCreateVM viewModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(person);
+                return View(viewModel);
             }
-            DataManager.AddPerson(person);
+            DataManager.AddPerson(viewModel);
             return RedirectToAction(nameof(Index));
         }
+
         [HttpGet]
         public IActionResult Edit(int id)
         {
             var person = DataManager.GetPerson(id);
-            return View(person);
+            PeopleEditVM viewModel = new PeopleEditVM
+            {
+                Name = person.Name,
+                Email = person.Email,
+                Id = person.Id
+            };
+            return View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Edit(Person person)
+        public IActionResult Edit(PeopleEditVM viewModel)
         {
             if (!ModelState.IsValid)
             {
-                return View(person);
+                return View(viewModel);
             }
+            //Person person = new Person
+            //{
+            //    Name = viewModel.Name,
+            //    Email = viewModel.Email,
+            //};
 
-            DataManager.EditPerson(person);
+            DataManager.EditPerson(viewModel);
 
             return RedirectToAction(nameof(Index));
         }
