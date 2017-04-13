@@ -8,34 +8,39 @@
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <form asp-action="Edit">
-        <table>
-            <tr>
-                <td>
-                    <label asp-for="Name"></label>
-                </td>
-                <td>
-                    <input asp-for="Name" />
-                    <span asp-validation-for="Name"></span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label asp-for="Email"></label>
-                </td>
-                <td>
-                    <input asp-for="Email" />
-                    <span asp-validation-for="Email"></span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input id="createButton" type="submit" />
-                </td>
-            </tr>
-        </table>
+    <div>
+        <h1>Edit Customer</h1>
+    </div>
+    <div>
+        <form asp-action="Edit">
+            <table>
+                <tr>
+                    <td>
+                        <label asp-for="Name"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Name" />
+                        <span asp-validation-for="Name"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="Email"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Email" />
+                        <span asp-validation-for="Email"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="createButton" type="submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
-    </form>
 
 </body>
 </html>

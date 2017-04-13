@@ -7,44 +7,40 @@
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <form asp-action="Create">
-        <table>
-            <tr>
-                <td>
-                    <label asp-for="Name"></label>
-                </td>
-                <td>
-                    <input asp-for="Name" />
-                    <span asp-validation-for="Name"></span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label asp-for="Email"></label>
-                </td>
-                <td>
-                    <input asp-for="Email" />
-                    <span asp-validation-for="Email"></span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label asp-for="AcceptTerms"></label>
-                </td>
-                <td>
-                    <input asp-for="AcceptTerms" type="checkbox"/>
-                    <span asp-validation-for="AcceptTerms"></span>
-                </td>
-            </tr>
-            <tr>
-                
-                <td>
-
-                    <input id="createButton" type="submit"/>
-                </td>
-            </tr>
-        </table>
-    </form>
+    <div>
+        <h1>Create Person</h1>
+    </div>
+    <div>
+        <form asp-action="Create">
+            <table>
+                <tr>
+                    <td>
+                        <label asp-for="Name"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Name" />
+                        <span asp-validation-for="Name"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="Email"></label>
+                    </td>
+                    <td>
+                        <input asp-for="Email" />
+                        <span asp-validation-for="Email"></span>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <label style="font-size:20px;" asp-for="AcceptTerms"></label>
+            <input style="width:15px; height:15px;" asp-for="AcceptTerms" type="checkbox" />
+            <br />
+            <span asp-validation-for="AcceptTerms"></span>
+            <br />
+            <input id="createButton" type="submit" />
+        </form>
+    </div>
 
 </body>
 </html>
