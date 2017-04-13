@@ -15,6 +15,7 @@ namespace GruppArbete_Personer.Models
         [Required]
         public string Email { get; set; }
 
+        [Display(Name = "I Accept terms & conditions")]
         [Required]
         [Range(typeof(bool), "true", "true", ErrorMessage = "It tickles")]
         public bool AcceptTerms { get; set; }   

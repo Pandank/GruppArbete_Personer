@@ -29,7 +29,18 @@
             </tr>
             <tr>
                 <td>
-                    <input id="createButton" type="submit" />
+                    <label asp-for="AcceptTerms"></label>
+                </td>
+                <td>
+                    <input asp-for="AcceptTerms" type="checkbox"/>
+                    <span asp-validation-for="AcceptTerms"></span>
+                </td>
+            </tr>
+            <tr>
+                
+                <td>
+
+                    <input id="createButton" type="submit"/>
                 </td>
             </tr>
         </table>
