@@ -4,18 +4,18 @@
 <html>
 <head>
     <title>People index</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
+    <h1>Our Peeps</h1>
+    <table id="peeps">
+        @foreach (var p in Model)
+        {
+            <tr><td>@p.ToString();</td><td><a asp-controller="People" asp-action="Edit" asp-route-id="@p.Id">Edit</a></td></tr>
 
-    @foreach (var p in Model)
-    {
-        <div>
-            <p>@p.ToString();
-                <a asp-controller="People" asp-action="Edit" asp-route-id="@p.Id">Edit</a>
-            </p>
-        </div>
-    }
-    
-    <a asp-controller="People" asp-action="Create">Create</a>
+        }
+    </table>
+
+    <a asp-controller="People" asp-action="Create"><input type="button" id="createButton" value="Create" /></a>
 </body>
 </html>

@@ -1,0 +1,40 @@
+﻿body {
+    width: 100%;
+    margin: auto;
+    background-color: azure;
+}
+
+h1 {
+    font-size: 70px;
+    color: seagreen;
+}
+
+#peeps {
+    border: none;
+    font-size: 30px;
+    font-weight:bolder;
+    color:seagreen;
+}
+
+#createButton {
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    background-color:darkslategrey;
+    color: mediumseagreen;
+}
+
+label {
+    font-size: 30px;
+    color: seagreen;
+    font-weight: bolder;
+    width: 250px;
+}
+
+input {
+    width: 400px;
+    height: 50px;
+    background-color:azure;
+    font-size: 30px;
+
+}

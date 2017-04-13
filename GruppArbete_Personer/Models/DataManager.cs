@@ -14,6 +14,7 @@ namespace GruppArbete_Personer.Models
             new Person{Email = "help@bris.com",Name = "Pelle Svanslös"},
             new Person{Email = "bjorn@bamse.se",Name = "Björn Green"},
             new Person{Email = "victoroman2@gmail.com",Name = "Victor Öman"},
+            new Person{Email = "sofia@unnerstaale.com",Name = "Sofia Unnerståle"},
         };
 
 

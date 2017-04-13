@@ -5,18 +5,35 @@
 <html>
 <head>
     <title>@Model.Name</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <form asp-action="Edit">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" />
-        <span asp-validation-for="Name"></span>
-        <br />
-        <label asp-for="Email"></label>
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-        <br />
-        <input type="submit" />
+        <table>
+            <tr>
+                <td>
+                    <label asp-for="Name"></label>
+                </td>
+                <td>
+                    <input asp-for="Name" />
+                    <span asp-validation-for="Name"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Email"></label>
+                </td>
+                <td>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="createButton" type="submit" />
+                </td>
+            </tr>
+        </table>
 
     </form>
 
