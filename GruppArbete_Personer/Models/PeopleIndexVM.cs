@@ -9,7 +9,6 @@ namespace GruppArbete_Personer.Models
 {
     public class PeopleIndexVM
     {
-        private bool _showAsHighlighted;
 
         [Display(Name = "First name")]
         public string Name { get; set; }
