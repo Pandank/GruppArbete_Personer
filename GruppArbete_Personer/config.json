@@ -1,0 +1,5 @@
+{
+  "ConnectionString": {
+    "PersonContextConnection": "Data Source=192.168.1.13;Database=PersonerDb;Persist Security Info=True;User ID=sa;Password=890807AcademyP455wOrd;MultipleActiveResultSets=true"
+  }
+}

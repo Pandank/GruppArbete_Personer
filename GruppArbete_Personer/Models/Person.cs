@@ -8,22 +8,14 @@ namespace GruppArbete_Personer.Models
 {
     public class Person
     {
-        public static int PersonCount { get; set; }
-        public Person()
-        {
-            this.Id = PersonCount;
-            PersonCount++;
-        }
-        public int Id { get;}
+        
+        public int Id { get; set; }
         
         public string Name { get; set; }
 
         
         public string Email { get; set; }
 
-        public override string ToString()
-        {
-            return $"Name:{Name,-15} Email:{Email,-31} Id:{Id}";
-        }
+        
     }
 }
